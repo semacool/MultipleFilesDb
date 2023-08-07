@@ -11,7 +11,7 @@ namespace ConsoleApp1.Database
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var connectionString = ConfigurationManager.ConnectionStrings["SqliteConnectionString"].ConnectionString;
+            var connectionString = "Data Source =./Database.db"; //ConfigurationManager.ConnectionStrings["SqliteConnectionString"].ConnectionString;
             optionsBuilder.UseSqlite(connectionString);
         }
     }
